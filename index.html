@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script>
+const proxyurl = "https://istanbulapp.herokuapp.com/";
+const url = "https://www.tamentegre.com/"; // Çekilecek Site
+fetch(proxyurl + url) // https://istanbulapp.herokuapp.com/https://siteadresi.com
+.then(response => response.text())
+.then(contents => console.log(contents)) // Console'a basar.
+.catch(() => console.log("Can’t access " + url + " response. Blocked by browser?")) // Hatayı yakalar
+    </script>
+</body>
+</html>
